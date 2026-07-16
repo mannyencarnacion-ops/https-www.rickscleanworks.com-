@@ -73,11 +73,19 @@ h3{font-size:1.4rem;margin-bottom:10px}
 .hero{position:relative;color:#fff;text-align:left;overflow:hidden}
 .hero .bg{position:absolute;inset:0;z-index:0}
 .hero .bg img{width:100%;height:100%;object-fit:cover}
-.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(0,20,54,.90) 0%,rgba(0,32,84,.72) 45%,rgba(0,41,112,.30) 100%)}
+.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(0,20,54,.92) 0%,rgba(0,32,84,.80) 45%,rgba(0,41,112,.58) 100%)}
 .hero .wrap{position:relative;z-index:1;padding-top:112px;padding-bottom:112px}
 .hero h1{color:#fff;max-width:14ch}
 .hero .lead{color:#dce8f5;max-width:560px}
 .hero .eyebrow{color:#6cc7ef}
+
+/* hero split + breathing logo */
+.hero-split{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+.hero-copy{min-width:0}
+.logo-hero{position:relative;z-index:1;justify-self:center;width:min(100%,430px);animation:floaty 4.6s ease-in-out infinite;will-change:transform}
+.logo-hero::before{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:120%;height:120%;border-radius:50%;background:radial-gradient(circle,rgba(9,162,221,.30) 0%,rgba(0,41,112,.22) 46%,rgba(0,41,112,0) 70%);z-index:-1}
+.logo-hero img{width:100%;height:auto;display:block;filter:drop-shadow(0 22px 30px rgba(0,10,30,.55))}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 .actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
 .hero .btn-ghost{color:#fff;border-color:rgba(255,255,255,.6)}
 .hero .btn-ghost:hover{background:#fff;color:var(--primary);border-color:#fff}
@@ -208,8 +216,14 @@ h3{font-size:1.4rem;margin-bottom:10px}
 @media(max-width:1000px){
   .grid{grid-template-columns:repeat(2,1fr)}
   .values{grid-template-columns:repeat(2,1fr)}
+  .hero-split{gap:36px}
+  .logo-hero{width:min(100%,340px)}
 }
 @media(max-width:860px){
+  .hero-split{grid-template-columns:1fr;gap:40px;text-align:center}
+  .hero h1,.hero .lead{max-width:none;margin-left:auto;margin-right:auto}
+  .hero .actions{justify-content:center}
+  .logo-hero{width:min(78%,300px)}
   .feature,.contact-split,.about-hero{grid-template-columns:1fr;gap:32px}
   .feature.rev .media{order:0}
   .reviews{grid-template-columns:1fr}
@@ -235,4 +249,6 @@ h3{font-size:1.4rem;margin-bottom:10px}
 /* scroll reveal (progressive enhancement) */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
 .reveal.in{opacity:1;transform:none}
-@media(pre
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none}
+}
