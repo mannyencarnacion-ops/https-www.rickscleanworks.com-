@@ -196,12 +196,8 @@
       <h2>Clean spaces are better places</h2>
       <p class="section-intro">Tell us about your cleaning needs and we&rsquo;ll send you a free estimate — usually within one business day.</p>
       <div class="form-card">
-        <form class="lead-form" action="https://formsubmit.co/ricklulimachi@rickscleanworks.com" method="POST" novalidate>
-          <input type="hidden" name="_subject" value="New lead from RicksCleanWorks.com">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_autoresponse" value="Thanks for reaching out to Rick's Clean Works — we received your request and will reply within one business day.">
-          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <form class="lead-form" action="/api/lead" method="POST" novalidate>
+          <input type="hidden" name="_form" value="contact">
           <div class="field">
             <label for="name">Name</label>
             <input id="name" name="name" type="text" autocomplete="name" required>
