@@ -85,6 +85,10 @@ h3{font-size:1.4rem;margin-bottom:10px}
 .logo-hero{position:relative;z-index:1;justify-self:center;width:min(100%,430px);animation:floaty 4.6s ease-in-out infinite;will-change:transform}
 .logo-hero::before{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:120%;height:120%;border-radius:50%;background:radial-gradient(circle,rgba(9,162,221,.30) 0%,rgba(0,41,112,.22) 46%,rgba(0,41,112,0) 70%);z-index:-1}
 .logo-hero img{width:100%;height:auto;display:block;filter:drop-shadow(0 22px 30px rgba(0,10,30,.55))}
+.logo-tagline{margin:16px auto 0;display:flex;align-items:center;justify-content:center;gap:14px;font-family:'Inter',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.22em;font-size:clamp(.64rem,1.15vw,.86rem);color:#e4eefb;text-shadow:0 1px 6px rgba(0,10,30,.6);white-space:nowrap}
+.logo-tagline::before,.logo-tagline::after{content:"";height:1.5px;width:28px;flex:none;border-radius:2px}
+.logo-tagline::before{background:linear-gradient(90deg,rgba(108,199,239,0),#6cc7ef)}
+.logo-tagline::after{background:linear-gradient(90deg,#6cc7ef,rgba(108,199,239,0))}
 @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 .actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
 .hero .btn-ghost{color:#fff;border-color:rgba(255,255,255,.6)}
