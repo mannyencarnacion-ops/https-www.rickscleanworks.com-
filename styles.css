@@ -212,7 +212,7 @@ h3{font-size:1.4rem;margin-bottom:10px}
 .site-foot{background:#081a33;color:#b7c6db;padding:66px 0 34px}
 .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px}
 .foot-grid .brand{color:#fff;margin-bottom:14px}
-.foot-grid img{height:44px;margin-bottom:14px}
+.foot-grid img{height:44px;width:auto;margin-bottom:14px}
 .foot-grid h4{color:#fff;font-family:'Inter',sans-serif;font-size:.82rem;text-transform:uppercase;letter-spacing:.13em;margin-bottom:16px;font-weight:600}
 .foot-grid p,.foot-grid a{font-size:.94rem;color:#b7c6db}
 .foot-grid a:hover{color:#6cc7ef}

@@ -1,0 +1,11 @@
+# Static assets: long cache, but deliberately NOT `immutable` — filenames here
+# are not content-hashed, so an image swap under the same name must still be
+# able to go stale. Change the filename (or add ?v=N) when replacing an asset.
+/assets/*
+  Cache-Control: public, max-age=2592000
+
+/styles.css
+  Cache-Control: public, max-age=86400
+
+/site.js
+  Cache-Control: public, max-age=86400
